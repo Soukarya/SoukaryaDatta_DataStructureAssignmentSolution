@@ -32,7 +32,7 @@ public class Main {
 		}
 		
 
-		Main.toRightSkewed(rightNode/*, order*/);
+		Main.toRightSkewed(rightNode);
 	}
 
 	static void traverseRightSkewed(Node root) {
