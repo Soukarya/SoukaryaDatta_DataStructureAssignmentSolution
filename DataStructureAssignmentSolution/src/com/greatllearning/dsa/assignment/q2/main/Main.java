@@ -16,7 +16,7 @@ public class Main {
 			return;
 		}
 		
-		Main.toRightSkewed(root.getLeft()/*, order*/);
+		Main.toRightSkewed(root.getLeft());
 		
 		Node rightNode = root.getRight();
 
