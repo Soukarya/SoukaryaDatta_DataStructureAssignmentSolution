@@ -15,15 +15,13 @@ public class Factory {
 		return this.floorListFromfactory;
 	}
 	
-	public static void input(final int totalFloorsInTheBuilding) {
+	public static void input(final int totalFloorsInTheBuilding, Skyscraper skyscraper) {
 		
 		final Scanner sc = Singleton.getScannerInstance();
 		Factory factory = Singleton.getFactoryInstance();
 		int floorSize = 0;
-		Skyscraper skyscraper = null;
 		
 		factory.floorListFromfactory = new ArrayList<Integer>(totalFloorsInTheBuilding);
-		skyscraper = new Skyscraper(totalFloorsInTheBuilding);
 		
 		// factory is producing the floors that will be given to architect by factories on the ith day  
 		for(int i=0;i<skyscraper.getTotalFloorsInTheBuilding();) {

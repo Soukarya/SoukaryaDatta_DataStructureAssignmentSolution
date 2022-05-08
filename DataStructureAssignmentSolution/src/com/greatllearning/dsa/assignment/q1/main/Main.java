@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import com.greatllearning.dsa.assignment.q1.factory.Factory;
 import com.greatllearning.dsa.assignment.q1.singleton.Singleton;
+import com.greatllearning.dsa.assignment.q1.skyscraper.Skyscraper;
 
 public class Main {
 	
@@ -66,7 +67,9 @@ public class Main {
 			}
 		} while(totalFloorsInTheBuilding<=0);
 		
-		Factory.input(totalFloorsInTheBuilding);
+		Skyscraper skyscraper = new Skyscraper(totalFloorsInTheBuilding);
+		
+		Factory.input(totalFloorsInTheBuilding, skyscraper);
 		
 		// getting the floor details from factory
 		Main.output(factory.getFloorsFromFactory());
@@ -74,5 +77,7 @@ public class Main {
 		// de-allocating resources
 		factory = null;
 		sc.close();
+		
+		System.out.println("\n***** Program completed successfully *****");
 	}
 }
