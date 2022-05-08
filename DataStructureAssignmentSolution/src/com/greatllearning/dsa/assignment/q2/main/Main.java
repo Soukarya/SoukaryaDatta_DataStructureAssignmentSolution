@@ -56,8 +56,14 @@ public class Main {
 		Node root = null;
 		Node result = null;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter total no of values: ");
-		num = sc.nextInt();
+		do {
+			System.out.println("Enter total no of values: ");
+			num = sc.nextInt();
+			if(num<=0) {
+				System.err.println("\nInvalid!!! Please enter positive number\n");
+			}
+		} while(num<=0);
+		
 		for (int i = 0; i < num; i++) {
 			System.out.print("Insert value at " + (i + 1) + ": ");
 			value = sc.nextInt();
@@ -73,11 +79,11 @@ public class Main {
 		System.out.println("\nInorder traversal of this BST");
 		BstCreation.inOrderTraversal(root);
 
-		toRightSkewed(root);
+		Main.toRightSkewed(root);
 		
 		// output
 		System.out.println("\n\nBinary search tree after converting to right skewed BST");
-		traverseRightSkewed(headNode);
+		Main.traverseRightSkewed(headNode);
 		System.out.println("\n\n***** Program completed successfully *****");
 		
 		root = null;
